@@ -1,4 +1,5 @@
 node_modules
+bruno
 Dockerfile*
 docker-compose*
 .dockerignore
