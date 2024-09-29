@@ -1,0 +1,13 @@
+{
+  "version": "1",
+  "name": "ShmooCon '25 Ticket Server",
+  "type": "collection",
+  "ignore": [
+    "node_modules",
+    ".git"
+  ],
+  "presets": {
+    "requestType": "http",
+    "requestUrl": "http://localhost/"
+  }
+}

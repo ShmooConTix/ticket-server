@@ -1,0 +1,18 @@
+meta {
+  name: Enable Ticket Mode
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://localhost/enableTicketMode
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "delayTime": 1000,
+    "duration": 5000
+  }
+}
