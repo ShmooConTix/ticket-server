@@ -10,7 +10,7 @@ export interface QueueRouteParams {
 
 const startQueue = new Queue("mock_server-start_queue", {
   connection: {
-    host: "redis",
+    host: "bullmq-redis",
     port: 6379,
   },
   defaultJobOptions: {
@@ -27,7 +27,7 @@ new Worker(
   async (job: Job) => (landingState.ticketMode = job.name === "start"),
   {
     connection: {
-      host: "127.0.0.1",
+      host: "bullmq-redis",
       port: 6379,
     },
   }
