@@ -5,7 +5,7 @@ To install dependencies:
 ```bash
 bun install
 ```
-s
+
 To run:
 
 ```bash

@@ -25,6 +25,8 @@ COPY . .
 FROM base AS release
 COPY --from=install /temp/prod/node_modules node_modules
 COPY --from=prerelease /usr/src/app/index.ts .
+COPY --from=prerelease /usr/src/app/utils.ts .
+COPY --from=prerelease /usr/src/app/tsconfig.json .
 COPY --from=prerelease /usr/src/app/ticket-server.sqlite .
 COPY --from=prerelease /usr/src/app/package.json .
 COPY --from=prerelease /usr/src/app/public ./public
