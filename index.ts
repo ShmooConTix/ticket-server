@@ -14,7 +14,7 @@ import { confirmPageRoute } from "./routes/confirm";
 
 export const logestic = Logestic.preset("fancy");
 
-export const db = new Database("ticket-server.sqlite", {
+export const db = new Database("/app/data/db.sqlite", {
   create: true,
 });
 
@@ -68,8 +68,9 @@ export const server = new Elysia()
       .get() as Riddle;
 
     if (!randomRiddle) {
-      logestic.error(`no riddles found in database!`);
-      process.exit(1);
+      db.run(
+        `INSERT INTO riddles (riddle, answer, secret_key) VALUES ('________ ShmooCon for graduating! (the work you are LOOKING for is congratulations)', 'congratulations', 'shoe'`
+      );
     }
 
     riddleState.r = randomRiddle;
