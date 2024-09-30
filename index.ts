@@ -63,7 +63,7 @@ export const server = new Elysia()
   .onStart(({ server, decorator: { logestic } }) => {
     logestic.info(`Server started on ${server?.url}:${server?.port}`);
 
-    const randomRiddle = db
+    let randomRiddle = db
       .query("SELECT * FROM riddles ORDER BY RANDOM() LIMIT 1")
       .get() as Riddle;
 
@@ -76,6 +76,14 @@ export const server = new Elysia()
           "shoe",
         ]
       );
+
+      randomRiddle = {
+        id: 1,
+        riddle: "________ ShmooCon for graduating! (the work you are LOOKING for is congratulations)",
+        answer: "congratulations",
+        image_url: null,
+        secret_key: "shoe",
+      };
     }
 
     riddleState.r = randomRiddle;
