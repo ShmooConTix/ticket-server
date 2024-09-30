@@ -15,8 +15,7 @@ import { $ } from "bun";
 
 export const logestic = Logestic.preset("fancy");
 
-await $`ls -l ./data`
-await $`stat ./data`
+await $`touch ./data/text.txt`
 
 export const db = new Database("./data/db.sqlite", {
   create: true,
