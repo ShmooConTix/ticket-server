@@ -14,7 +14,7 @@ import { confirmPageRoute } from "./routes/confirm";
 
 export const logestic = Logestic.preset("fancy");
 
-export const db = new Database("/app/data/db.sqlite", {
+export const db = new Database("./data/db.sqlite", {
   create: true,
 });
 
