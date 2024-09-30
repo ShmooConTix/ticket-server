@@ -32,9 +32,9 @@ export async function holdPageRoute({
   params: any;
   query: Record<string, string | undefined>;
 }) {
-  if (!cookie.XC.value || !riddleState.r) return <NotFoundPage />;
+  if (!cookie.XC.value || !riddleState.r || !query[riddleState.r.secret_key]) return <NotFoundPage />;
 
-  if (query[riddleState.r.secret_key] !== riddleState.r.answer) {
+  if (query[riddleState.r.secret_key]?.toLowerCase() !== riddleState.r.answer.toLowerCase()) {
     logestic.info(
       `riddle answer incorrect (riddle key: ${
         riddleState.r.secret_key
