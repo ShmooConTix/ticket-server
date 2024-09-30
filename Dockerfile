@@ -32,6 +32,7 @@ COPY --from=prerelease /usr/src/app/public ./public
 COPY --from=prerelease /usr/src/app/routes ./routes
 
 # run the app
+RUN chown -R bun:bun /app/data
 USER bun
 EXPOSE 80:1000/tcp
 ENTRYPOINT [ "bun", "run", "index.ts" ]
