@@ -26,8 +26,6 @@ export function saleRoute({
   if (!cookie.XC.value || !cookie.CC.value || !riddleState.r)
     return NotFoundPage();
 
-  console.log(query);
-
   const saleData = saleSchema.safeParse(query);
 
   if (saleData.error) return NotFoundPage();
