@@ -11,8 +11,12 @@ import NotFoundPage from "./routes/404";
 import { holdPageRoute } from "./routes/hold";
 import { saleRoute } from "./routes/sale";
 import { confirmPageRoute } from "./routes/confirm";
+import { $ } from "bun";
 
 export const logestic = Logestic.preset("fancy");
+
+await $`pwd`
+await $`ls`
 
 export const db = new Database("./data/db.sqlite", {
   create: true,
