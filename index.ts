@@ -71,7 +71,7 @@ export const server = new Elysia()
       db.run(
         `INSERT INTO riddles (riddle, answer, secret_key) VALUES (?, ?, ?)`,
         [
-          "________ ShmooCon for graduating! (the work you are LOOKING for is congratulations)",
+          "________ ShmooCon for graduating! (the word you are LOOKING for is congratulations)",
           "congratulations",
           "shoe",
         ]
