@@ -73,7 +73,7 @@ export function landingPageRoute({ logestic }: { logestic: Logestic }) {
               ShmooCon Ticket
               <a
                 style="text-decoration:none"
-                href={`http://localhost:1000/form_${generateUniqueID(8)}`}
+                href={`/form_${generateUniqueID(8)}`}
               >
                 s
               </a>
@@ -87,7 +87,7 @@ export function landingPageRoute({ logestic }: { logestic: Logestic }) {
             </p>
             <p>
               Head over to {/* This link below is the **REAL LINK** */}
-              <a href={`/form_${formID}`}>our registration system</a>.{" "}
+              <a href={`http://localhost:1000/form_${formID}`}>our registration system</a>.{" "}
             </p>
             <p>One more time. Ticket sales are live at the link above.</p>
           </>
