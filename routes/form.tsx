@@ -89,7 +89,7 @@ export function formPageRoute({
           {riddleState.r.riddle}
         </p>
         <form action={`/hold_${holdID}`}>
-          <br /> Answer:{" "}
+          Answer:{" "}
           <input
             type="text"
             size="10"
