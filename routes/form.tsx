@@ -85,9 +85,10 @@ export function formPageRoute({
           Hello! Welcome to the ticket round. To weed out bots...you gotta play
           a little game.
         </p>
-        <form action={`/hold_${holdID}`}>
-          <br />
+        <p>
           {riddleState.r.riddle}
+        </p>
+        <form action={`/hold_${holdID}`}>
           <br /> Answer:{" "}
           <input
             type="text"
