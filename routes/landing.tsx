@@ -73,7 +73,7 @@ export function landingPageRoute({ logestic }: { logestic: Logestic }) {
               ShmooCon Ticket
               <a
                 style="text-decoration:none"
-                href={`/form_${generateUniqueID(8)}`}
+                href={`/form_${generateUniqueID(8)}.html`}
               >
                 s
               </a>
